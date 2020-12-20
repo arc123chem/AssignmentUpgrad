@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ImageHoster/ImageHoster.iml" filepath="$PROJECT_DIR$/ImageHoster/ImageHoster.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/ImageHoster_assignment_stub2.iml" filepath="$PROJECT_DIR$/.idea/ImageHoster_assignment_stub2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ImageHoster_assignment_stub2final.iml" filepath="$PROJECT_DIR$/.idea/ImageHoster_assignment_stub2final.iml" />
     </modules>
   </component>
 </project>

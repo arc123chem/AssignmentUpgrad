@@ -37,9 +37,6 @@ public class Image {
     @Column(name = "date")
     private Date date;
 
-    @Column(name="text")
-    private String text;
-
     //The 'images' table is mapped to 'users' table with Many:One mapping
     //One image can have only one user (owner) but one user can have multiple images
     //FetchType is EAGER
@@ -53,9 +50,21 @@ public class Image {
     //Since the mapping is Many to Many, a new table will be generated containing the two columns both referencing to the primary key of both the tables ('images', 'tags')
     @ManyToMany(fetch = FetchType.LAZY)
     private List<Tag> tags = new ArrayList<>();
-    // @ManyToMany(fetch = FetchType.LAZY, mappedBy = "comments")
-    // private List<Comment> commentImage = new ArrayList<>();
 
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public Image(List<Comment> comments) {
+        this.comments = comments;
+    }
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    private List<Comment> comments = new ArrayList<>();
 
     public Image() {
     }
@@ -67,9 +76,6 @@ public class Image {
         this.date = date;
     }
 
-
-
-
     public Image(int id, String title, String imageFile, String description, Date date) {
         this.id = id;
         this.title = title;
@@ -78,6 +84,7 @@ public class Image {
         this.date = date;
 
     }
+
 
 
     public Integer getId() {
@@ -124,7 +131,6 @@ public class Image {
         return user;
     }
 
-
     public void setUser(User user) {
         this.user = user;
     }
@@ -136,11 +142,4 @@ public class Image {
     public void setTags(List<Tag> tags) {
         this.tags = tags;
     }
-
-  /*  public String getText() {
-        return text;
-    }
-    public void setText(String text) {
-        this.text =text;
-    }*/
 }

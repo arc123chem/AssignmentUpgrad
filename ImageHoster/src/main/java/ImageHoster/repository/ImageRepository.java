@@ -87,7 +87,9 @@ public class ImageRepository {
         } catch (Exception e) {
             transaction.rollback();
         }
+
         return updatedImage;
+
     }
 
     //The method receives the Image id of the image to be deleted in the database
@@ -110,6 +112,10 @@ public class ImageRepository {
         } catch (Exception e) {
             transaction.rollback();
         }
+
     }
+
+
+/*   public Comment getCommentById(Integer imageId){}*/
 
 }

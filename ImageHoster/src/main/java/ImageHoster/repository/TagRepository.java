@@ -21,6 +21,7 @@ public class TagRepository {
         } catch (Exception e) {
             transaction.rollback();
         }
+
         return tag;
     }
 

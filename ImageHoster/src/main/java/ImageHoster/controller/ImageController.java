@@ -1,8 +1,10 @@
 package ImageHoster.controller;
 
+import ImageHoster.model.Comment;
 import ImageHoster.model.Image;
 import ImageHoster.model.Tag;
 import ImageHoster.model.User;
+import ImageHoster.service.CommentService;
 import ImageHoster.service.ImageService;
 import ImageHoster.service.TagService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +29,10 @@ public class ImageController {
     @Autowired
     private TagService tagService;
 
+    @Autowired
+    private CommentService commentService;
+
+
     //This method displays all the images in the user home page after successful login
     @RequestMapping("images")
     public String getUserImages(Model model) {
@@ -45,11 +51,13 @@ public class ImageController {
     //Also now you need to add the tags of an image in the Model type object
     //Here a list of tags is added in the Model type object
     //this list is then sent to 'images/image.html' file and the tags are displayed
-    @RequestMapping("/images/{imageId}/{title}")
+    @RequestMapping(value="/images/{imageId}/{title}", method=RequestMethod.GET)
     public String showImage(@PathVariable("imageId") Integer imageId, Model model) {
         Image image = imageService.getImageByTitle(imageId);
         model.addAttribute("image", image);
         model.addAttribute("tags", image.getTags());
+        List<Comment > comments=commentService.getCommentsById(imageId);
+         model.addAttribute("comments",comments);
         return "images/image";
     }
 
@@ -92,22 +100,23 @@ public class ImageController {
     //The method first needs to convert the list of all the tags to a string containing all the tags separated by a comma and then add this string in a Model type object
     //This string is then displayed by 'edit.html' file as previous tags of an image
     @RequestMapping(value = "/editImage")
-    public String editImage(@RequestParam("imageId") Integer imageId, Model model,HttpSession session) {
+    public String editImage(@RequestParam("imageId") Integer imageId, Model model, HttpSession session) {
 
         Image image = imageService.getImage(imageId);
 
-        User rightUser=image.getUser();
-        String rightUserName=rightUser.getUsername();
+        User rightUser = image.getUser();
+        String rightUserName = rightUser.getUsername();
         String tags = convertTagsToString(image.getTags());
-        User user= (User) session.getAttribute("loggeduser");
-        String loggedUser= user.getUsername();
+        User user = (User) session.getAttribute("loggeduser");
+        String loggedUser = user.getUsername();
         model.addAttribute("image", image);
         model.addAttribute("tags", tags);
-        if(!image.getUser().getId().equals(user.getId())){
-            String error=  "Only the owner of the image can edit the image";
-            model.addAttribute("editError",error);
-            return  "images/image";
-        }else
+        model.addAttribute("comments", commentService.getCommentsById(imageId));
+        if (!image.getUser().getId().equals(user.getId())) {
+            String error = "Only the owner of the image can edit the image";
+            model.addAttribute("editError", error);
+            return "images/image";
+        } else
 
             return "images/edit";
 
@@ -141,6 +150,7 @@ public class ImageController {
         User user = (User) session.getAttribute("loggeduser");
         updatedImage.setUser(user);
         updatedImage.setTags(imageTags);
+
         updatedImage.setDate(new Date());
 
         imageService.updateImage(updatedImage);
@@ -156,21 +166,22 @@ public class ImageController {
         // imageService.deleteImage(imageId);
         Image image = imageService.getImage(imageId);
         User user = (User) session.getAttribute("loggeduser");
-        if(!image.getUser().getId().equals(user.getId())){
-            String error = "Only the owner of the image can delete the image";
 
-            model.addAttribute("image", image);
-            model.addAttribute("tags", image.getTags());
+      model.addAttribute("image", image);
+        model.addAttribute("tags", image.getTags());
+        model.addAttribute("comments",commentService.getCommentsById(imageId));
+
+        if(!(image.getUser().getId().equals(user.getId())))
+       {             String error = "Only the owner of the image can delete the image";
+
             model.addAttribute("deleteError", error);
-            return "images/image";}
+            return "images/image";
+        }
+        else{
+            imageService.deleteImage(imageId);
 
-        imageService.deleteImage(imageId);
-        return "redirect:/images";
+        return "redirect:/images";}
     }
-
-
-
-
 
 
     //This method converts the image to Base64 format
@@ -215,22 +226,30 @@ public class ImageController {
         return tagString.toString();
     }
 
-/*   @RequestMapping(value = "/image/{imageId}/{imageTitle}/comments", method = RequestMethod.POST)
-    public String commentImage(@RequestParam("file") MultipartFile file, @RequestParam("comments")  Integer imageId, Model model,HttpSession session) throws IOException {
 
-     //   User user = (User) session.getAttribute("comment");
+
+   /*@RequestMapping(value = "/image/{imageId}/{imageTitle}/comments", method = RequestMethod.POST)
+    public String uploadComment( @PathVariable("imageTitle") String imageTitle,@PathVariable("imageId") Integer imageId, @RequestParam(name = "comment") String  comment,Model model, Comment uploadComment, HttpSession session) throws IOException {
+
+        User user = (User) session.getAttribute("loggeduser");
+       uploadComment.setUser(user);
+
+        //String uploadedCommentData = convertUploadedFileToBase64(file);
+       // comment.setText(uploadedCommentData);
        Image image = imageService.getImage(imageId);
-       String commentImage=image.getText();
-       model.addAttribute("image", image);
-       model.addAttribute("comments", commentImage);
-       image.setText( commentImage);
+       // Comment imageComments =commentService.createComment(commnt);
+       uploadComment.setImage(image);
+       uploadComment.setText(comment);
+       uploadComment.setCreatedDate(new Date());
+       Comment imageComments =commentService.createComment(uploadComment);
+      // model.addAttribute("Comments",imageComments);
+
+        return "redirect:/images/{imageId}/{imageTitle}";
+    }
+
+*/
+
+    }
 
 
 
-        image.setDate(new Date());
-        imageService.updateImage(image);
-
-        return "redirect:/images";
-    }*/
-
-}
