@@ -19,28 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59ffc9bc-fdf0-4b69-9148-c75bc172b081" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ImageHoster_assignment_stub2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="59ffc9bc-fdf0-4b69-9148-c75bc172b081" name="Default Changelist" comment="final commit">
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageHoster/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ImageHoster/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageHoster/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ImageHoster/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageHoster/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ImageHoster/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageHoster/src/main/java/ImageHoster/controller/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ImageHoster/src/main/java/ImageHoster/controller/ImageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageHoster/src/main/java/ImageHoster/model/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/ImageHoster/src/main/java/ImageHoster/model/Image.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageHoster/src/main/java/ImageHoster/repository/ImageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ImageHoster/src/main/java/ImageHoster/repository/ImageRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageHoster/src/main/java/ImageHoster/repository/TagRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ImageHoster/src/main/java/ImageHoster/repository/TagRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageHoster/src/test/java/ImageHoster/controller/CommentControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ImageHoster/src/test/java/ImageHoster/controller/CommentControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageHoster/src/test/java/ImageHoster/controller/HomeControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ImageHoster/src/test/java/ImageHoster/controller/HomeControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageHoster/src/test/java/ImageHoster/controller/ImageControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ImageHoster/src/test/java/ImageHoster/controller/ImageControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageHoster/src/test/java/ImageHoster/controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ImageHoster/src/test/java/ImageHoster/controller/UserControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageHoster/target/classes/ImageHoster/controller/ImageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ImageHoster/target/classes/ImageHoster/controller/ImageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageHoster/target/classes/ImageHoster/model/Image.class" beforeDir="false" afterPath="$PROJECT_DIR$/ImageHoster/target/classes/ImageHoster/model/Image.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageHoster/target/classes/ImageHoster/repository/ImageRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/ImageHoster/target/classes/ImageHoster/repository/ImageRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageHoster/target/classes/ImageHoster/repository/TagRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/ImageHoster/target/classes/ImageHoster/repository/TagRepository.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +32,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1lstnLTTeeU0JhwNfMOCwEv5HyO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -166,8 +148,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608397791316</updated>
-      <workItem from="1608397792573" duration="39201000" />
+      <workItem from="1608397792573" duration="42354000" />
     </task>
+    <task id="LOCAL-00001" summary="final commit">
+      <created>1608498209751</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608498209751</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,6 +173,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="final commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="final commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="563" y="214" key="#CommentControllerTest.createComment" timestamp="1608491091058">
@@ -225,38 +219,42 @@
     </state>
     <state x="563" y="214" key="#UserControllerTest.signupWithWrongPasswordType/0.0.1920.1040@0.0.1920.1040" timestamp="1608491231318" />
     <state x="563" y="229" key="#UserControllerTest/0.0.1920.1040@0.0.1920.1040" timestamp="1608491215976" />
-    <state width="1860" height="281" key="GridCell.Tab.0.bottom" timestamp="1608495558231">
+    <state x="740" y="264" key="FileChooserDialogImpl" timestamp="1608499895759">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608495558231" />
-    <state width="1860" height="281" key="GridCell.Tab.0.center" timestamp="1608495558231">
+    <state x="740" y="264" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1608499895759" />
+    <state width="1860" height="281" key="GridCell.Tab.0.bottom" timestamp="1608498560685">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608495558231" />
-    <state width="1860" height="281" key="GridCell.Tab.0.left" timestamp="1608495558231">
+    <state width="1860" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608498560685" />
+    <state width="1860" height="281" key="GridCell.Tab.0.center" timestamp="1608498560685">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608495558231" />
-    <state width="1860" height="281" key="GridCell.Tab.0.right" timestamp="1608495558231">
+    <state width="1860" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608498560685" />
+    <state width="1860" height="281" key="GridCell.Tab.0.left" timestamp="1608498560685">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608495558231" />
-    <state width="1860" height="281" key="GridCell.Tab.1.bottom" timestamp="1608495558231">
+    <state width="1860" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608498560685" />
+    <state width="1860" height="281" key="GridCell.Tab.0.right" timestamp="1608498560685">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="281" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608495558231" />
-    <state width="1860" height="281" key="GridCell.Tab.1.center" timestamp="1608495558231">
+    <state width="1860" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608498560685" />
+    <state width="1860" height="281" key="GridCell.Tab.1.bottom" timestamp="1608498560686">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="281" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608495558231" />
-    <state width="1860" height="281" key="GridCell.Tab.1.left" timestamp="1608495558231">
+    <state width="1860" height="281" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608498560686" />
+    <state width="1860" height="281" key="GridCell.Tab.1.center" timestamp="1608498560685">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="281" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608495558231" />
-    <state width="1860" height="281" key="GridCell.Tab.1.right" timestamp="1608495558231">
+    <state width="1860" height="281" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608498560685" />
+    <state width="1860" height="281" key="GridCell.Tab.1.left" timestamp="1608498560685">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="281" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608495558231" />
+    <state width="1860" height="281" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608498560685" />
+    <state width="1860" height="281" key="GridCell.Tab.1.right" timestamp="1608498560685">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="281" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608498560685" />
     <state width="1860" height="385" key="GridCell.Tab.2.bottom" timestamp="1608473280414">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -277,14 +275,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1608397947964" />
-    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608496028635">
+    <state x="552" y="256" key="Vcs.Push.Dialog.v2" timestamp="1608521761711">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608496028635" />
+    <state x="552" y="256" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608521761711" />
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608500393443">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1608500393443" />
     <state x="514" y="248" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1608406685276">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="514" y="248" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040@0.0.1920.1040" timestamp="1608406685276" />
+    <state x="667" y="311" key="git4idea.merge.GitMergeDialog" timestamp="1608521746656">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="311" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608521746656" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
